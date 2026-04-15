@@ -15,7 +15,7 @@ public enum FxmlView {
 
         @Override
         public String getFxmlPath() {
-            return "/fxml/home.fxml";
+            return "/fxml/login.fxml";
         }
     },
 

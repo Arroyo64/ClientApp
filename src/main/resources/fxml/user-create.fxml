@@ -12,7 +12,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ies.demo.fornix.clientapp.controller.LoginController">
+<?import javafx.scene.control.Label?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ies.demo.fornix.clientapp.controllerFx.ClientController">
 <top>
     <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="454.0" BorderPane.alignment="CENTER">
         <BorderPane.margin>
@@ -23,8 +24,7 @@
         </padding>
         <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" textAlignment="RIGHT">
             <graphic>
-                <ImageView fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@../graphics/Setting.png" />
+                <ImageView fx:id="settingsImage" fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                 </ImageView>
             </graphic>
         </Button>
@@ -35,20 +35,19 @@
         <opaqueInsets>
             <Insets />
         </opaqueInsets>
-        <ImageView fitHeight="154.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../graphics/FenixLogo.png" />
+        <ImageView fx:id="logoImage" fitHeight="154.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true">
         </ImageView>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Por último">
             <font>
                 <Font name="System Bold" size="48.0" />
             </font>
         </Text>
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Define un sobrenombre y contraseña que recuerdes">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Escribe tu nombre de usuario y contraseña">
             <font>
                <Font size="16.0" />
             </font>
          </Text>
-        <TextField prefHeight="45.0" prefWidth="434.0" promptText="Usuario" style="-fx-background-radius: 8;">
+        <TextField fx:id="username" prefHeight="45.0" prefWidth="434.0" promptText="Usuario" style="-fx-background-radius: 8;">
             <VBox.margin>
                 <Insets left="25.0" right="25.0" />
             </VBox.margin>
@@ -56,7 +55,7 @@
                 <Font size="20.0" />
             </font>
         </TextField>
-         <PasswordField promptText="Contraseña">
+         <PasswordField fx:id="password" promptText="Contraseña">
             <font>
                <Font size="20.0" />
             </font>
@@ -64,7 +63,7 @@
                <Insets left="25.0" right="25.0" />
             </VBox.margin>
          </PasswordField>
-         <PasswordField promptText="Misma contraseña">
+         <PasswordField fx:id="passwordCheck" promptText="Misma contraseña">
             <font>
                <Font size="20.0" />
             </font>
@@ -72,11 +71,12 @@
                <Insets left="25.0" right="25.0" />
             </VBox.margin>
          </PasswordField>
-        <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="396.0" style="-fx-background-radius: 8;" text="Continuar">
+        <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="396.0" style="-fx-background-radius: 8;" text="Continuar" onAction="#saveUserAndOpenLogInView">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
+        <Label fx:id="loginErrorLabel" layoutX="7.0" layoutY="223.0" prefHeight="59.0" prefWidth="296.0" text="Label" />
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Al continuar, aceptas nuestra Política de privacidad">
             <font>
                 <Font size="16.0" />

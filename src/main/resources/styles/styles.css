@@ -148,3 +148,16 @@
     -fx-opacity: 0.65;
     -fx-font-size: 12px;
 }
+
+#settingsImage{
+    -fx-image: url("../graphics/Setting.png");
+}
+
+#logoImage{
+    -fx-image: url("../graphics/FenixLogo.png");
+}
+
+#loginErrorLabel {
+    -fx-text-fill: #FF0000;
+    -fx-font-size: 12px;
+}

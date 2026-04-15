@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ies.demo.fornix.clientapp.controller.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ies.demo.fornix.clientapp.controllerFx.EmailFormController">
 <top>
     <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="454.0" BorderPane.alignment="CENTER">
         <BorderPane.margin>
@@ -22,8 +22,7 @@
         </padding>
         <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" textAlignment="RIGHT">
             <graphic>
-                <ImageView fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@../graphics/Setting.png" />
+                <ImageView fx:id="settingsImage" fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                 </ImageView>
             </graphic>
         </Button>
@@ -34,8 +33,7 @@
         <opaqueInsets>
             <Insets />
         </opaqueInsets>
-        <ImageView fitHeight="154.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../graphics/FenixLogo.png" />
+        <ImageView fx:id="logoImage" fitHeight="154.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true">
         </ImageView>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Para empezar">
             <font>
@@ -47,7 +45,7 @@
                <Font size="16.0" />
             </font>
          </Text>
-        <TextField prefHeight="45.0" prefWidth="434.0" promptText="Correo electrónico" style="-fx-background-radius: 8;">
+        <TextField fx:id="emailTextField" prefHeight="45.0" prefWidth="434.0" promptText="Correo electrónico" style="-fx-background-radius: 8;">
             <VBox.margin>
                 <Insets left="25.0" right="25.0" />
             </VBox.margin>
@@ -55,12 +53,12 @@
                 <Font size="20.0" />
             </font>
         </TextField>
-        <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="396.0" style="-fx-background-radius: 8;" text="Continuar">
+        <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="396.0" style="-fx-background-radius: 8;" text="Continuar" onAction="#switchToUserCreateView">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-         <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="396.0" style="-fx-background-radius: 8;" text="Ya tengo una cuenta">
+         <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="396.0" style="-fx-background-radius: 8;" text="Ya tengo una cuenta" onAction="#switchLogInView">
             <font>
                <Font name="System Bold" size="18.0" />
             </font>

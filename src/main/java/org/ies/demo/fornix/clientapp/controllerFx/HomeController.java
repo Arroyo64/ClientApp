@@ -70,8 +70,8 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    void switchToScalesScene() {
-        stageManager.switchToNextScene(FxmlView.SCALES);
+    void switchToEmailScene() {
+        stageManager.switchToNextScene(FxmlView.EMAIL);
     }
 
     @FXML
@@ -85,7 +85,7 @@ public class HomeController implements Initializable {
 
     @FXML
     public void switchToIntervalsScene(ActionEvent actionEvent) {
-        stageManager.switchToNextScene(FxmlView.INTERVALS);
+        stageManager.switchToNextScene(FxmlView.MARKETPLACE);
 
     }
 

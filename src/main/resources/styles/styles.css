@@ -157,7 +157,7 @@
     -fx-image: url("../graphics/FenixLogo.png");
 }
 
-#loginErrorLabel {
+#clientErrorLabel {
     -fx-text-fill: #FF0000;
     -fx-font-size: 12px;
 }

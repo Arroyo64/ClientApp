@@ -82,7 +82,7 @@
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="loginErrorLabel" layoutX="7.0" layoutY="223.0" prefHeight="59.0" prefWidth="296.0" text="Label" />
+        <Label fx:id="clientErrorLabel" layoutX="7.0" layoutY="223.0" prefHeight="59.0" prefWidth="296.0" text="Label" />
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Al continuar, aceptas nuestra Política de privacidad">
             <font>
                 <Font size="16.0" />

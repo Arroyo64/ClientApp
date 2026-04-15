@@ -17,7 +17,8 @@ public class ApplicationConfig {
     private final ApplicationEventPublisher eventPublisher;
 
     public ApplicationConfig(FxmlLoader fxmlLoader,
-                             @Value("${application.title}") String applicationTitle, ApplicationEventPublisher eventPublisher) {
+                             @Value("${application.title}") String applicationTitle,
+                             ApplicationEventPublisher eventPublisher) {
         this.fxmlLoader = fxmlLoader;
         this.applicationTitle = applicationTitle;
         this.eventPublisher = eventPublisher;
@@ -25,7 +26,7 @@ public class ApplicationConfig {
 
     @Bean
     @Lazy
-    public StageManager stageManager(Stage primaryStage) throws IOException {
+    public StageManager stageManager(Stage primaryStage) {
         return new StageManager(fxmlLoader, primaryStage, applicationTitle, eventPublisher);
     }
 }

@@ -22,24 +22,21 @@ public class FxApplication extends Application {
 
     @Override
     public void stop() {
-        applicationContext.close();
-        stage.close();
+        if (applicationContext != null) {
+            applicationContext.close();
+        }
+        if (stage != null) {
+            stage.close();
+        }
     }
 
     @Override
     public void start(Stage primaryStage) {
         stage = primaryStage;
 
-        var context = applicationContext.getBeanFactory();
-        var appConfig = applicationContext.getBean(ApplicationConfig.class);
+        applicationContext.getBeanFactory().registerSingleton("primaryStage", primaryStage);
 
-        stageManager = new StageManager(
-                applicationContext.getBean(org.ies.demo.fornix.clientapp.config.FxmlLoader.class),
-                primaryStage,
-                applicationContext.getEnvironment().getProperty("application.title"),
-                applicationContext
-        );
-
+        stageManager = applicationContext.getBean(StageManager.class);
         showLoginScene();
     }
 

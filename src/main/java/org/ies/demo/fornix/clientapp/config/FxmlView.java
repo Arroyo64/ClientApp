@@ -11,27 +11,27 @@ public enum FxmlView {
         }
     },
 
-    HOME {
+    EMAIL {
 
         @Override
         public String getFxmlPath() {
-            return "/fxml/home.fxml";
+            return "/fxml/email-form.fxml";
         }
     },
 
-    SCALES {
+    USER_CREATE {
 
         @Override
         public String getFxmlPath() {
-            return "/fxml/scales.fxml";
+            return "/fxml/user-create.fxml";
         }
     },
 
-    INTERVALS {
+    MARKETPLACE {
 
         @Override
         public String getFxmlPath() {
-            return "/fxml/intervals.fxml";
+            return "/fxml/marketplace.fxml";
         }
     },
 

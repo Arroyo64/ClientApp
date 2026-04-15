@@ -74,6 +74,16 @@
             <artifactId>spring-boot-starter-webflux-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>21.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>21.0.6</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -90,6 +100,16 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <!-- JavaFX -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>org.ies.tierno.fenix.Launcher</mainClass>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
